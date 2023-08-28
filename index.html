@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toytow</title>
+  <style>
+    .container {
+        background-color: greenyellow;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    .dice {
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+    }
+
+
+    img {
+        width: 50%;
+    }
+
+
+    .bottom {
+        padding-top: 30px;
+    }
+
+
+    .butn {
+        background: blue;
+        font-family: "Indie Flower", cursive;
+        border-radius: 7px;
+        color: #ffff;
+        font-size: 30px;
+        padding: 16px 25px 16px 25px;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>ทอยลูกเต๋า</h1>
+
+
+        <div class="dice">
+            <img class="img1" src="dice1.png">
+        </div>
+
+
+        <div class="dice">
+            <img class="img2" src="dice1.png">
+        </div>
+
+
+        <div class="dice">
+            <img class="img3" src="dice1.png">
+        </div>
+    </div>
+
+
+    <div class="container bottom">
+        <button type="button" class="butn" onClick="rollTheDice()">
+            สุ่มโชค
+        </button>
+    </div>
+
+
+    <script>
+        function rollTheDice() {
+                var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+                var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+                var randomNumber3 = Math.floor(Math.random() * 6) + 1;
+   
+                document.querySelector(".img1").setAttribute("src","dice" + randomNumber1 + ".png");
+   
+                document.querySelector(".img2").setAttribute("src","dice" + randomNumber2 + ".png");
+   
+                document.querySelector(".img3").setAttribute("src","dice" + randomNumber3 + ".png");
+        }
+    </script>
+   
+</body>
+
+
+</html>
